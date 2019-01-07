@@ -1,0 +1,11 @@
+body {
+  height: 250px;
+  width: 500px;
+  border: solid black 1px;
+  padding: 10px
+}
+
+.title {
+  text-align: center;
+  color: orange;
+}
