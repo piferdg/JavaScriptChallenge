@@ -1,9 +1,3 @@
-let dropdown = document.getElementById('holidays')
-let christmas = document.createElement('option')
-let halloween = document.createElement('option')
-let independenceDay = document.createElement('option')
-let newYears = document.createElement('option')
-let thanksgiving = document.createElement('option')
 
 function holidayList() {
   const holidays = [
@@ -11,24 +5,17 @@ function holidayList() {
     {id: 1,name: 'Halloween'},
     {id: 2,name: 'Independence Day'},
     {id: 3,name: 'New Years'},
-    {id: 4,name: 'Thanksgiving'}
+    {id: 4,name: 'Thanksgiving'},
+    {id: 5,name: 'Birthday'}
   ]
+
+  let dropdown = document.getElementById('holidays')
+  
   for (let i = 0; i < holidays.length; i++) {
+    let holiday = document.createElement('option')
+    holiday.textContent = holidays[i].name
+    dropdown.appendChild(holiday)
     
-    christmas.textContent = holidays[0].name
-    dropdown.appendChild(christmas)
-
-    halloween.textContent = holidays[1].name
-    dropdown.appendChild(halloween  )
-
-    independenceDay.textContent = holidays[2].name
-    dropdown.appendChild(independenceDay)
-
-    newYears.textContent = holidays[3].name
-    dropdown.appendChild(newYears)
-
-    thanksgiving.textContent = holidays[4].name
-    dropdown.appendChild(thanksgiving)
   }
 }
 holidayList()
